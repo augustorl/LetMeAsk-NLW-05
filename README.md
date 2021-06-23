@@ -3,7 +3,8 @@
 </p>
 
 <p align="center">
-  <img  src="https://img.shields.io/static/v1?label=license&message=MIT&color=5965E0&labelColor=121214" alt="License">
+  <img  src="https://img.shields.io/static/v1?label=license&message=MIT&color=5965E0&labelColor=835AFD" alt="License">
+    <img src="https://img.shields.io/github/stars/augustorl/LetMeAsk-NLW-05?label=stars&message=MIT&color=5965E0&labelColor=835AFD" alt="Stars">
 </p>
 
 <h1 align="center">
