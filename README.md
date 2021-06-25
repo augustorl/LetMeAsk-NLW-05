@@ -12,7 +12,11 @@
 </h1>
 
 <br>
-
+## 🛠 Additional Features
+  - [Styled Components](https://styled-components.com/)
+  - Fully Responsive.
+  - Dark theme (loading...)
+<br>
 ## 🧪 Technologies
 
 This project was developed using the following technologies:
