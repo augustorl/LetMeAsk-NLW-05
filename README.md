@@ -37,8 +37,12 @@ $ yarn
 
 # Start the project
 $ yarn start
+
+# Seed with Your Firebase Project
+Create Firebase account & Real Time Database at https://firebase.google.com/?hl=pt.
 ```
 The app will be available for access on your browser at http://localhost:3000
+
 
 ## 🔖 Layout
 
