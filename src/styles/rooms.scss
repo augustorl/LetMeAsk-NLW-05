@@ -9,9 +9,16 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      @media(max-width: 520px) {
+        justify-content: center;
+      }
 
       > img {
         max-height: 45px;
+
+        @media(max-width: 520px) {
+          display: none;
+        }
       }
 
       > div {
@@ -28,6 +35,9 @@
   main {
     max-width: 800px;
     margin: 0 auto;
+    @media(max-width: 800px) {
+      max-width: 85vw;
+    }
 
     .room-title {
       margin: 32px 0 24px;
@@ -61,6 +71,7 @@
         box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
         resize: vertical;
         min-height: 130px;
+        resize: none;
       }
 
       .form-footer {
@@ -68,6 +79,16 @@
         justify-content: space-between;
         align-items: center;
         margin-top: 16px;
+
+        @media(max-width: 520px) {
+
+          button {
+            margin-top: 15px;
+            width: 42%;
+            font-size: 12px;
+            padding: 10px;
+          }
+        }
 
         .user-info {
           display: flex;
