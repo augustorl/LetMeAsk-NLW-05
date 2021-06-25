@@ -1,13 +1,12 @@
 import { useHistory } from 'react-router-dom';
-import { database } from '../services/firebase';
-import illustrationImg from '../assets/images/illustration.svg'
-import logoImg from '../assets/images/logo.svg'
-import googleIconImg from '../assets/images/google-icon.svg'
+import illustrationImg from '../../assets/images/illustration.svg'
+import logoImg from '../../assets/images/logo.svg'
+import googleIconImg from '../../assets/images/google-icon.svg'
 import { FormEvent, useState } from 'react';
-import { Button } from '../components/Button';
-
-import '../styles/auth.scss';
-import { useAuth } from '../hooks/useAuth';
+import { Container, Content } from './styles';
+import { useAuth } from '../../hooks/useAuth';
+import { database } from '../../services/firebase';
+import { Button } from '../../components/Button';
 
 export function Home() {
   const history = useHistory()
@@ -44,7 +43,7 @@ export function Home() {
   }
 
   return (
-    <div id="page-auth">
+    <Container>
       <aside>
         <img src={illustrationImg} alt="Ilustração simbolizando perguntas e respostas" />
         <strong>Crie salas de Q&amp;A ao-vivo</strong>
@@ -54,7 +53,7 @@ export function Home() {
       </aside>
 
       <main>
-        <div className="main-content">
+        <Content>
           <img src={logoImg} alt="Letmeask" />
           <button onClick={handleCreateRoom} className="create-room">
             <img src={googleIconImg} alt="Logo do Google" />
@@ -74,8 +73,8 @@ export function Home() {
               Entrar na sala
             </Button>
           </form>
-        </div>
+        </Content>
       </main>
-    </div>
+    </Container>
   )
 }
