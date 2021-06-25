@@ -1,19 +1,14 @@
-import { Route,  BrowserRouter } from 'react-router-dom'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
 
-import { Home } from "./pages/Home";
-import { NewRoom } from "./pages/NewRoom";
+import './services/firebase';
 
-import { AuthContextProvider } from './contexts/AuthContext'
+import './styles/global.scss';
 
-function App() {
-  return (
-    <BrowserRouter>
-      <AuthContextProvider>
-        <Route path="/" exact component={Home} />
-        <Route path="/rooms/new" component={NewRoom} />
-      </AuthContextProvider>
-    </BrowserRouter>
-  );
-}
-
-export default App;
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
