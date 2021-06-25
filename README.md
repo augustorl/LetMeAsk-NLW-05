@@ -16,8 +16,6 @@
 
 ## 🛠 Additional Features
 
-Improved features:
-
 - [Styled Components](https://styled-components.com/)
 - Fully Responsive.
 - Dark Theme. (Loading ...)
