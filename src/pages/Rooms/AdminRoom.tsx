@@ -1,17 +1,15 @@
 import { useParams, useHistory } from 'react-router-dom'
 
-import logoImg from '../assets/images/logo.svg';
-import deleteImg from '../assets/images/delete.svg';
-import checkImg from '../assets/images/check.svg';
-import answerImg from '../assets/images/answer.svg';
-
-import { Button } from '../components/Button';
-import { Question } from '../components/Question';
-import { RoomCode } from '../components/RoomCode';
-import { useRoom } from '../hooks/useRoom';
-
-import '../styles/rooms.scss'
-import { database } from '../services/firebase';
+import logoImg from '../../assets/images/logo.svg';
+import deleteImg from '../../assets/images/delete.svg';
+import checkImg from '../../assets/images/check.svg';
+import answerImg from '../../assets/images/answer.svg';
+import { Container  } from './styles';
+import { Question } from '../../components/Question';
+import { Button } from '../../components/Button';
+import { RoomCode } from '../../components/RoomCode';
+import { database } from '../../services/firebase';
+import { useRoom } from '../../hooks/useRoom';
 
 type RoomParams = {
   id: string
@@ -52,7 +50,7 @@ export function AdminRoom() {
   }
 
   return(
-    <div id="page-room">
+    <Container>
       <header>
         <div className="content">
           <img src={logoImg} alt="Letmeask" />
@@ -104,6 +102,6 @@ export function AdminRoom() {
         })}
         </div>
       </main>
-    </div>
+    </Container>
   )
 }
