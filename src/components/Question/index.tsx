@@ -8,7 +8,9 @@ type QuestionProps = {
     name: string;
     avatar: string;
   };
-  children?: ReactNode
+  children?: ReactNode,
+  isAnswered?: boolean,
+  isHighlighted?: boolean, 
 }
 
 export function Question({ content, author, children }: QuestionProps) {
