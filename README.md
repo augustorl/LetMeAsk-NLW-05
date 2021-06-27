@@ -18,7 +18,7 @@
 
 - [Styled Components](https://styled-components.com/)
 - Fully Responsive.
-- Dark Theme (Loading ...).
+- Dark Theme.
 
 
 ## 🧪 Technologies
