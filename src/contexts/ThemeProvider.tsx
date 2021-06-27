@@ -5,10 +5,13 @@ import { lightTheme, darkTheme } from '../styles/themes';
 interface Theme {
   name: string;
   colors: {
+    black: string,
+    shadow: string,
     white50: string,
     white100: string,
     gray50: string,
     gray100: string,
+    gray150: string,
     red: string;
     purple: string;
     pink: string;
