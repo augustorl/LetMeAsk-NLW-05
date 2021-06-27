@@ -9,9 +9,11 @@ interface Theme {
     shadow: string,
     white50: string,
     white100: string,
+    white150: string,
     gray50: string,
     gray100: string,
     gray150: string,
+    gray200: string,
     red: string;
     purple: string;
     pink: string;
