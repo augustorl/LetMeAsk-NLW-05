@@ -6,10 +6,10 @@ export const Container = styled.div`
     border-bottom: 1px solid ${({ theme }) => theme.colors.gray150};
 
     .content {
-      max-width: 1120px;
+      max-width: 1200px;
       margin: 0 auto;
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
       align-items: center;
       
       @media(max-width: 520px) {
