@@ -13,6 +13,14 @@
 
 <br>
 
+
+## 🛠 Additional Features
+
+- [Styled Components](https://styled-components.com/)
+- Fully Responsive.
+- Dark Theme (Loading ...).
+
+
 ## 🧪 Technologies
 
 This project was developed using the following technologies:
