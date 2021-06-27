@@ -10,7 +10,8 @@ import { useAuth } from '../../hooks/useAuth';
 import { database } from '../../services/firebase';
 import { Button } from '../../components/Button';
 import { useContext } from 'react';
-import { ThemeContext } from 'styled-components';
+import { ToggleThemeButton } from '../../components/ToggleThemeButton';
+import { ThemeContext } from '../../contexts/ThemeProvider';
 
 export function Home() {
   const history = useHistory()
@@ -58,7 +59,7 @@ export function Home() {
 
       <main>
         <Content>
-          <img src={theme === 'light' ? logoImg : darkLogoImg} alt="Letmeask" />
+          <img src={theme.name === 'light' ? logoImg : darkLogoImg} alt="Letmeask" />
           <button onClick={handleCreateRoom} className="create-room">
             <img src={googleIconImg} alt="Logo do Google" />
             Crie sua sala com o Google
@@ -79,6 +80,7 @@ export function Home() {
           </form>
         </Content>
       </main>
+      <ToggleThemeButton/>
     </Container>
   )
 }

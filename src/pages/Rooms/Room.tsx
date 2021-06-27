@@ -10,7 +10,8 @@ import { database } from '../../services/firebase';
 import { Button } from '../../components/Button';
 import { Question } from '../../components/Question';
 import { RoomCode } from '../../components/RoomCode';
-import { ThemeContext } from 'styled-components';
+import { ToggleThemeButton } from '../../components/ToggleThemeButton';
+import { ThemeContext } from '../../contexts/ThemeProvider';
 
 type RoomParams = {
   id: string
@@ -66,8 +67,9 @@ export function Room() {
     <Container>
       <header>
         <div className="content">
-        <img src={theme === 'light' ? logoImg : darkLogoImg} alt="Letmeask" />
+        <img src={theme.name === 'light' ? logoImg : darkLogoImg} alt="Letmeask" />
           <RoomCode code={roomId} />
+          <ToggleThemeButton/>
         </div>
       </header>
 

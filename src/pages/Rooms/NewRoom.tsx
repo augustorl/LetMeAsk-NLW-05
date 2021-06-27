@@ -7,7 +7,9 @@ import { database } from '../../services/firebase';
 import { Button } from '../../components/Button';
 import { useAuth } from '../../hooks/useAuth';
 import darkLogoImg from '../../assets/images/dark-theme-logo.svg'
-import { ThemeContext } from 'styled-components';
+
+import { ToggleThemeButton } from '../../components/ToggleThemeButton';
+import { ThemeContext } from '../../contexts/ThemeProvider';
 
 export function NewRoom() {
   const { user } = useAuth()
@@ -45,7 +47,7 @@ export function NewRoom() {
 
       <main>
         <Content>
-          <img src={theme === 'light' ? logoImg : darkLogoImg} alt="Letmeask" />
+          <img src={theme.name === 'light' ? logoImg : darkLogoImg} alt="Letmeask" />
 
           <h2>Criar uma nova sala</h2>
 
@@ -61,10 +63,11 @@ export function NewRoom() {
             </Button>
           </form>
           <p>
-            Quer entrar em uma sala existente? <Link to="/">clique aqui</Link>
+            Quer entrar em uma sala existente? <Link to="/">Clique aqui.</Link>
           </p>
         </Content>
       </main>
+      <ToggleThemeButton/>
     </Container>
   )
 }
