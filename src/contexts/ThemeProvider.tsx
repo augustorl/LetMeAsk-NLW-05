@@ -2,7 +2,7 @@ import React, { createContext, useCallback, useContext, useState } from "react";
 import { ThemeProvider } from 'styled-components';
 import { lightTheme, darkTheme } from '../styles/themes';
 
-interface Theme {
+export interface Theme {
   name: string;
   colors: {
     black: string,
@@ -27,7 +27,7 @@ export const ThemeContext = createContext<ThemeContextData>(
 export const useTheme = () => useContext(ThemeContext);
 
 export const CustomThemeProvider: React.FC = ({ children }) => {
-  const [theme, setTheme] = useState<Theme>(lightTheme);
+  const [theme, setTheme] = useState<Theme>(darkTheme);
   const toggleTheme = useCallback(() => {
     if (theme.name === 'light'){
       setTheme(darkTheme);

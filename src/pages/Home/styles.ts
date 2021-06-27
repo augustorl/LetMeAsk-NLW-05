@@ -8,7 +8,7 @@ export const Container = styled.div`
     aside {
       flex: 7;
       background-color: ${({ theme }) => theme.colors.purple};
-      color: ${({ theme }) => theme.colors.white50};
+      color: ${({ theme }) => theme.colors.textColor};
   
       display: flex;
       flex-direction: column;
@@ -34,7 +34,7 @@ export const Container = styled.div`
         font-size: 24px;
         line-height: 32px;
         margin-top: 12px;
-        color: ${({ theme }) => theme.colors.white100};
+        color: ${({ theme }) => theme.colors.textColor};
       }
     }
   
@@ -55,7 +55,7 @@ export const Container = styled.div`
     border-radius: 8px;
     font-weight: 500;
     background:  ${({ theme }) => theme.colors.red};
-    color:  ${({ theme }) => theme.colors.white50};
+    color: ${({ theme }) => theme.colors.textColor};
   
     display: flex;
     justify-content: center;
@@ -107,6 +107,7 @@ export const Content = styled.div`
       max-width: 320px;
       align-items: stretch;
       text-align: center;
+      
   
       > img {
         align-self: center;
@@ -116,6 +117,7 @@ export const Content = styled.div`
         font-size: 24px;
         margin: 64px 0 24px;
         font-family: 'Poppins', sans-serif;
+        color: ${({ theme }) => theme.colors.textColor};
       }
   
       form {
@@ -125,6 +127,7 @@ export const Content = styled.div`
           padding: 0 16px;
           background:${({ theme }) => theme.colors.white50};
           border: 1px solid ${({ theme }) => theme.colors.gray50};
+          color: ${({ theme }) => theme.colors.textColor};
         }
   
         button {
@@ -138,7 +141,7 @@ export const Content = styled.div`
   
       p {
         font-size: 14px;
-        color: ${({ theme }) => theme.colors.gray100};
+        color: ${({ theme }) => theme.colors.textColor};
         margin-top: 16px;
   
         a {
