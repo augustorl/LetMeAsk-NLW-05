@@ -3,6 +3,8 @@ export const lightTheme = {
     colors: {
         white50:'#fff',
         shadow: 'rgba(0, 0, 0, 0.04)',
+        textColor: "#29292e",
+        headingText: "#fff",
         black: ' #29292e',
         white100: '#f8f8f8',
         white150: '#f4f0ff',
@@ -23,6 +25,7 @@ export const darkTheme = {
         textColor: "#fff",
         shadow: '#33334A',
         black: ' #fefefe',
+        headingText: "#fff",
         white100: '#1f2029',
         white150: '#737380',
         gray50: '#737380',

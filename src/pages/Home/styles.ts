@@ -8,7 +8,7 @@ export const Container = styled.div`
     aside {
       flex: 7;
       background-color: ${({ theme }) => theme.colors.purple};
-      color: ${({ theme }) => theme.colors.textColor};
+      color: ${({ theme }) => theme.colors.headingText};
   
       display: flex;
       flex-direction: column;
@@ -34,7 +34,6 @@ export const Container = styled.div`
         font-size: 24px;
         line-height: 32px;
         margin-top: 12px;
-        color: ${({ theme }) => theme.colors.textColor};
       }
     }
   
