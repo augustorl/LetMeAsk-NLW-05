@@ -32,6 +32,7 @@ export const Container = styled.div`
       width: 230px;
       font-size: 14px;
       font-weight: 500;
+      color: ${({ theme }) => theme.colors.textColor};
 
       @media(max-width: 520px) {
         padding: 0 8px 0 4px;

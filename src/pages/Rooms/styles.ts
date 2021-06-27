@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-
   header {
     padding: 24px;
     border-bottom: 1px solid ${({ theme }) => theme.colors.gray150};
@@ -51,7 +50,7 @@ export const Container = styled.div`
       h1 {
         font-family: 'Poppins', sans-serif;
         font-size: 24px;
-        color: ${({ theme }) => theme.colors.black};
+        color: ${({ theme }) => theme.colors.textColor};
       }
 
       span {
@@ -59,7 +58,7 @@ export const Container = styled.div`
         background: ${({ theme }) => theme.colors.pink};
         border-radius: 9999px;
         padding: 8px 16px;
-        color: ${({ theme }) => theme.colors.white50};
+        color: ${({ theme }) => theme.colors.textColor};
         font-weight: 500;
         font-size: 14px;
       }
@@ -73,6 +72,7 @@ export const Container = styled.div`
         border-radius: 8px;
         background: ${({ theme }) => theme.colors.white100};
         box-shadow: 0 2px 12px ${({ theme }) => theme.colors.shadow};
+        color: ${({ theme }) => theme.colors.textColor};
         resize: vertical;
         min-height: 130px;
         resize: none;
@@ -82,7 +82,7 @@ export const Container = styled.div`
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-top: 16px;
+        margin-top: 24px;
 
         @media(max-width: 520px) {
 

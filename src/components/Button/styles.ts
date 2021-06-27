@@ -5,7 +5,7 @@ export const MyButton = styled.button`
     border-radius: 8px;
     font-weight: 500;
     background: ${({ theme }) => theme.colors.purple};
-    color: ${({ theme }) => theme.colors.white50};
+    color: ${({ theme }) => theme.colors.textColor};
     padding: 0 32px;
 
     @media(max-width: 520px) {

@@ -1,6 +1,8 @@
 import { createGlobalStyle } from 'styled-components';
+import { Theme } from '../contexts/ThemeProvider';
 
-export const GlobalStyle = createGlobalStyle`
+
+export const GlobalStyle = createGlobalStyle<{ theme: Theme }>`
 * {
     margin: 0;
     padding: 0;
@@ -8,8 +10,8 @@ export const GlobalStyle = createGlobalStyle`
   }
   
   body {
-    background: #f8f8f8;
-    color: #29292e;
+    background: ${({ theme }) => theme.colors.white50};
+    color: ${({ theme }) => theme.colors.white50};
   }
   
   body, input, button, textarea {
