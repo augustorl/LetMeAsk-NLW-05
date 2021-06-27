@@ -4,8 +4,8 @@ export const MyButton = styled.button`
     height: 50px;
     border-radius: 8px;
     font-weight: 500;
-    background: #835afd;
-    color: #FFF;
+    background: ${({ theme }) => theme.colors.purple};
+    color: ${({ theme }) => theme.colors.white50};
     padding: 0 32px;
 
     @media(max-width: 520px) {
@@ -35,8 +35,8 @@ export const MyButton = styled.button`
     }
 
     &.outlined {
-      background: #FFF;
-      border: 1px solid #835afd;
-      color: #835afd;
+      background: ${({ theme }) => theme.colors.white50};
+      border: 1px solid ${({ theme }) => theme.colors.purple};
+      color: ${({ theme }) => theme.colors.purple};
     }
 `

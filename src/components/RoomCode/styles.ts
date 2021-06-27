@@ -9,14 +9,14 @@ export const Container = styled.div`
       max-width: 200px;
     }
   
-    background: #FFF;
-    border: 1px solid #835afd;
+    background: ${({ theme }) => theme.colors.white50};
+    border: 1px solid ${({ theme }) => theme.colors.purple};
     cursor: pointer;
   
     display: flex;
   
     div {
-      background: #835afd;
+      background: ${({ theme }) => theme.colors.purple};
       padding: 0 12px;
       display: flex;
       justify-content: center;
