@@ -1,6 +1,6 @@
-import { FormEvent, useState } from 'react';
+import { FormEvent, useContext, useState } from 'react';
 import { useParams } from 'react-router-dom'
-
+import darkLogoImg from '../../assets/images/dark-theme-logo.svg'
 import logoImg from '../../assets/images/logo.svg';
 import { Container } from './styles';
 
@@ -10,6 +10,7 @@ import { database } from '../../services/firebase';
 import { Button } from '../../components/Button';
 import { Question } from '../../components/Question';
 import { RoomCode } from '../../components/RoomCode';
+import { ThemeContext } from 'styled-components';
 
 type RoomParams = {
   id: string
@@ -20,6 +21,7 @@ export function Room() {
   const params = useParams<RoomParams>()
   const [newQuestion, setNewQuestion] = useState('')
   const roomId = params.id;
+  const { theme } = useContext(ThemeContext);
   
   const { title, questions } = useRoom(roomId)
 
@@ -64,7 +66,7 @@ export function Room() {
     <Container>
       <header>
         <div className="content">
-          <img src={logoImg} alt="Letmeask" />
+        <img src={theme === 'light' ? logoImg : darkLogoImg} alt="Letmeask" />
           <RoomCode code={roomId} />
         </div>
       </header>

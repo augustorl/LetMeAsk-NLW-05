@@ -10,7 +10,9 @@ import { Button } from '../../components/Button';
 import { RoomCode } from '../../components/RoomCode';
 import { database } from '../../services/firebase';
 import { useRoom } from '../../hooks/useRoom';
-
+import darkLogoImg from '../../assets/images/dark-theme-logo.svg'
+import { useContext } from 'react';
+import { ThemeContext } from 'styled-components';
 type RoomParams = {
   id: string
 }
@@ -22,6 +24,7 @@ export function AdminRoom() {
   const roomId = params.id;
   
   const { title, questions } = useRoom(roomId)
+  const { theme } = useContext(ThemeContext);
 
   async function handleEndRoom() {
     await database.ref(`rooms/${roomId}`).update({
@@ -53,7 +56,7 @@ export function AdminRoom() {
     <Container>
       <header>
         <div className="content">
-          <img src={logoImg} alt="Letmeask" />
+        <img src={theme === 'light' ? logoImg : darkLogoImg} alt="Letmeask" />
           <div>
             <RoomCode code={roomId} />
             <Button isOutlined onClick={handleEndRoom}>Encerrar sala</Button>
