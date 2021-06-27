@@ -7,8 +7,8 @@ export const Container = styled.div`
 
     aside {
       flex: 7;
-      background: #835afd;
-      color: #fff;
+      background-color: ${({ theme }) => theme.colors.purple};
+      color: ${({ theme }) => theme.colors.white50};
   
       display: flex;
       flex-direction: column;
@@ -34,7 +34,7 @@ export const Container = styled.div`
         font-size: 24px;
         line-height: 32px;
         margin-top: 12px;
-        color: #f8f8f8;
+        color: ${({ theme }) => theme.colors.white100};
       }
     }
   
@@ -54,8 +54,8 @@ export const Container = styled.div`
     height: 50px;
     border-radius: 8px;
     font-weight: 500;
-    background: #ea4335;
-    color: #FFF;
+    background:  ${({ theme }) => theme.colors.red};
+    color:  ${({ theme }) => theme.colors.white50};
   
     display: flex;
     justify-content: center;
@@ -77,7 +77,7 @@ export const Container = styled.div`
   
   .separator {
     font-size: 14px;
-    color: #a8a8b3;
+    color:  ${({ theme }) => theme.colors.gray50};
   
     margin: 32px 0;
     display: flex;
@@ -87,7 +87,7 @@ export const Container = styled.div`
       content: '';
       flex: 1;
       height: 1px;
-      background: #a8a8b3;
+      background:  ${({ theme }) => theme.colors.gray50};
       margin-right: 16px;
     }
   
@@ -95,7 +95,7 @@ export const Container = styled.div`
       content: '';
       flex: 1;
       height: 1px;
-      background: #a8a8b3;
+      background: ${({ theme }) => theme.colors.gray50};
       margin-left: 16px;
     }
 `;
@@ -123,8 +123,8 @@ export const Content = styled.div`
           height: 50px;
           border-radius: 8px;
           padding: 0 16px;
-          background:#FFF;
-          border: 1px solid #a8a8b3;
+          background:${({ theme }) => theme.colors.white50};
+          border: 1px solid ${({ theme }) => theme.colors.gray50};
         }
   
         button {
@@ -138,11 +138,11 @@ export const Content = styled.div`
   
       p {
         font-size: 14px;
-        color: #737380;
+        color: ${({ theme }) => theme.colors.gray100};
         margin-top: 16px;
   
         a {
-          color: #e559f9;
+          color:${({ theme }) => theme.colors.pink};
         }
       }
 `
