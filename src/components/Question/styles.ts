@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 
 export const QuestionContainer = styled.div`
-    background: #fefefe;
+    background: ${({ theme }) => theme.colors.white100};
     border-radius: 8px;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 2px 12px${({ theme }) => theme.colors.shadow};
     padding: 24px;
   
     & + .question {
@@ -12,20 +12,20 @@ export const QuestionContainer = styled.div`
     }
 
     &.highlighted {
-      background: #f4f0ff;
-      border: 1px solid #835AFD;
+      background: ${({ theme }) => theme.colors.white150};
+      border: 1px solid ${({ theme }) => theme.colors.purple};
   
       footer .user-info span {
-        color: #29292E;
+        color: ${({ theme }) => theme.colors.black};
       }
     }
   
     &.answered {
-      background: #DBDCDD;
+      background: ${({ theme }) => theme.colors.gray200};
     }
     
     p {
-      color: #29292e;
+      color: ${({ theme }) => theme.colors.black};
     }
   
     footer {
@@ -50,7 +50,7 @@ export const QuestionContainer = styled.div`
   
         span {
           margin-left: 8px;
-          color: #737380;
+          color: ${({ theme }) => theme.colors.gray100};
           font-size: 14px;
         }
       }
@@ -64,14 +64,13 @@ export const QuestionContainer = styled.div`
         &.like-button {
           display: flex;
           align-items: flex-end;
-          color: #737380;
+          color: ${({ theme }) => theme.colors.gray100};
           gap: 8px;
   
           &.liked {
-            color: #835afd;
-  
+            color: ${({ theme }) => theme.colors.purple};
             svg path {
-              stroke: #835afd;
+              stroke:  ${({ theme }) => theme.colors.purple};
             }
           }
         }
