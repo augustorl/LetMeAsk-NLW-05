@@ -4,7 +4,7 @@ export const Container = styled.div`
     display: flex;
     align-items: stretch;
     height: 100vh;
-
+    background-color: ${({ theme }) => theme.colors.white50};
     aside {
       flex: 7;
       background-color: ${({ theme }) => theme.colors.purple};
