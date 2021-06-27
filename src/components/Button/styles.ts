@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const MyButton = styled.button`
-    height: 50px;
+    height: 40px;
     border-radius: 8px;
     font-weight: 500;
     background: ${({ theme }) => theme.colors.purple};
